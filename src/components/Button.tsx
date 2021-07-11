@@ -1,14 +1,11 @@
-type ButtonProps = {
-    children?: string;
-    href?: string;
-}
+import { ButtonHTMLAttributes } from "react"
 
-export function Button(link: ButtonProps) {
-    function pressButton() {
-        window.location.href = (link.href || 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-    }
+import '../styles/button.scss'
 
-    return(
-        <button onClick={pressButton}>{link.children || 'Default'}</button>
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+
+export function Button(props: ButtonProps) {
+    return (
+        <button className='button' {...props}/>
     )
 }
