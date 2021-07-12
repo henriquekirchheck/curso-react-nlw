@@ -10,8 +10,6 @@ import { ShowGoogleAccount } from '../components/ShowGoogleAccount'
 
 import '../styles/auth.scss'
 
-// webpack (Snowpack, vite)
-
 export function Home() {
     const history = useHistory()
     const { user, signInWithGoogle } = useAuth()

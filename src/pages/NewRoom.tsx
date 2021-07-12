@@ -9,8 +9,6 @@ import { ShowGoogleAccount } from '../components/ShowGoogleAccount'
 import '../styles/auth.scss'
 // import { useAuth } from '../hooks/useAuth'
 
-// webpack (Snowpack, vite)
-
 export function NewRoom() {
     // const { user } = useAuth()
 

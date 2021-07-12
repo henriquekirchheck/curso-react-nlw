@@ -11,7 +11,7 @@ export function ShowGoogleAccount() {
             <div className='show-account'>
                 <p>{user.name}</p>
                 <button>
-                    <img src={user.avatar} alt="" />
+                    <img src={user.avatar} alt="avatar" />
                 </button>
             </div>
         )
