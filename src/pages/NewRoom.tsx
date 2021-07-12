@@ -4,17 +4,19 @@ import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 
 import { Button } from '../components/Button'
+import { ShowGoogleAccount } from '../components/ShowGoogleAccount'
 
 import '../styles/auth.scss'
-import { useAuth } from '../hooks/useAuth'
+// import { useAuth } from '../hooks/useAuth'
 
 // webpack (Snowpack, vite)
 
 export function NewRoom() {
-    const { user } = useAuth()
+    // const { user } = useAuth()
 
     return (
         <div id='page-auth'>
+            <div><ShowGoogleAccount/></div>
             <aside>
                 <img src={illustrationImg} alt="Illustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>

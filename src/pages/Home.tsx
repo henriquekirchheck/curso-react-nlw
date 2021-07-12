@@ -6,6 +6,7 @@ import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
 
 import { Button } from '../components/Button'
+import { ShowGoogleAccount } from '../components/ShowGoogleAccount'
 
 import '../styles/auth.scss'
 
@@ -31,6 +32,7 @@ export function Home() {
                 <p>Tire duvidas da sua audiencia em tempo real</p>
             </aside>
             <main>
+                <ShowGoogleAccount />
                 <div className="main-content">
                     <img src={logoImg} alt="LetMeAsk" />
                     <button onClick={handleCreateRoom} className='create-room'>
