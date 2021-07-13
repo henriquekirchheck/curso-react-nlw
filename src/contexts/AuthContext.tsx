@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState, useEffect } from "react"
+import toast from "react-hot-toast"
 
 import { auth, firebase } from '../services/firebase'
 
@@ -28,6 +29,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
           const { displayName, photoURL, uid } = user
   
           if (!displayName || !photoURL) {
+            toast.error("Sem informação da conta do Google")
             throw new Error('Missing Information from Google Account')
           }
   

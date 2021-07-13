@@ -1,18 +1,16 @@
 .show-account {
     display: flex;
-    
-    padding: 5px;
 
-    position: absolute;
-    top: 0; 
-    right: 0;
+    border-radius: 999px;
+
+    padding: 5px;
     
     p {
         font: 400 16px 'Roboto', sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 10px;
+        margin: 10px;
     }
 
     button {
@@ -21,7 +19,7 @@
         width: 50px;
 
         display: flex;
-        cursor:  pointer;
+        cursor: pointer;
         border: 0;
 
         transition: filter 0.5s;
@@ -43,4 +41,103 @@
         img {
             border-radius: 50%;
         }
+
+    }
+
+#top-right {
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#botton-right {
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#top-left {
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#bottom-left {
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.show-account-border {
+    display: flex;
+
+    border: 2px solid #E559F9;
+    background-color: #E559F9;
+    border-radius: 999px;
+
+    padding: 5px;
+    
+    p {
+        font: 400 16px 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    button {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+
+        display: flex;
+        cursor: pointer;
+        border: 0;
+
+        transition: filter 0.5s;
+
+        img {
+            margin-right: 16px;
+        }
+
+        &:not(:disabled)hover {
+            filter: brightness(0.9)
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+
+        img {
+            border-radius: 50%;
+        }
+
+    }
+
+#top-right {
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#botton-right {
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#top-left {
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#bottom-left {
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

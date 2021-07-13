@@ -2,13 +2,33 @@ import { useAuth } from '../hooks/useAuth'
 
 import '../styles/showGoogleAccount.scss'
 
-export function ShowGoogleAccount() {
+type ShowGoogleAccountProps = {
+    location?: string | undefined;
+    border?: boolean;
+}
+
+export function ShowGoogleAccount(props:ShowGoogleAccountProps) {
     const { user } = useAuth() 
-    let responce
+    let location
+    let border
+
+    if(props.location === 'top-left' || props.location === 'top-right' || props.location === 'bottom-left' || props.location === 'bottom-right') {
+        location = props.location
+    } else if(props.location === undefined) {
+        location = 'free'
+    }
+
+    if(props.border === undefined) {
+        border = 'show-account-border'
+    } else if(props.border === true){
+        border = 'show-account-border'
+    } else {
+        border = 'show-account'
+    }
 
     if(user) {
-        responce = (
-            <div className='show-account'>
+        return (
+            <div id={location} className={border}>
                 <p>{user.name}</p>
                 <button>
                     <img src={user.avatar} alt="avatar" />
@@ -16,10 +36,8 @@ export function ShowGoogleAccount() {
             </div>
         )
     } else {
-        responce = (
+        return (
             <div></div>
         )
     }
-
-    return responce
 }
