@@ -3,7 +3,7 @@ import { useAuth } from '../hooks/useAuth'
 import '../styles/showGoogleAccount.scss'
 
 type ShowGoogleAccountProps = {
-    location?: string | undefined;
+    location?: string;
     border?: boolean;
 }
 
@@ -30,7 +30,7 @@ export function ShowGoogleAccount(props:ShowGoogleAccountProps) {
         return (
             <div id={location} className={border}>
                 <p>{user.name}</p>
-                <button>
+                <button type='button'>
                     <img src={user.avatar} alt="avatar" />
                 </button>
             </div>
