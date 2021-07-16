@@ -1,3 +1,20 @@
+
+
+
+
+
+# O app quebrou e eu sem querer commitei as chaves de autenticação e eu não consegui recuperar pois eu não fiz bons commits
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
