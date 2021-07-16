@@ -42,6 +42,13 @@ export function Home() {
             return
         }
 
+        if(roomRef.val().endedAt) {
+            toast('Essa sala já foi encerada!', {
+                icon: '⚠️',
+            })
+            return
+        }
+
         history.push(`/rooms/${roomCode}`)
     }
 

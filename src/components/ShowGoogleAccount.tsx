@@ -7,28 +7,28 @@ type ShowGoogleAccountProps = {
     border?: boolean;
 }
 
-export function ShowGoogleAccount(props:ShowGoogleAccountProps) {
+export function ShowGoogleAccount({location='free', border=false}:ShowGoogleAccountProps) {
     const { user } = useAuth() 
-    let location
-    let border
+    let locationButton
+    let borderButton
 
-    if(props.location === 'top-left' || props.location === 'top-right' || props.location === 'bottom-left' || props.location === 'bottom-right') {
-        location = props.location
-    } else if(props.location === undefined) {
-        location = 'free'
+    if(location === 'top-left' || location === 'top-right' || location === 'bottom-left' || location === 'bottom-right') {
+        locationButton = location
+    } else if(location === undefined) {
+        locationButton = 'free'
     }
 
-    if(props.border === undefined) {
-        border = 'show-account-border'
-    } else if(props.border === true){
-        border = 'show-account-border'
+    if(border === undefined) {
+        borderButton = 'show-account-border'
+    } else if(border === true){
+        borderButton = 'show-account-border'
     } else {
-        border = 'show-account'
+        borderButton = 'show-account'
     }
 
     if(user) {
         return (
-            <div id={location} className={border}>
+            <div id={locationButton} className={borderButton}>
                 <p>{user.name}</p>
                 <button type='button'>
                     <img src={user.avatar} alt="avatar" />
