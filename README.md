@@ -3,7 +3,7 @@
 
 
 
-# O app quebrou e eu sem querer commitei as chaves de autenticação e eu não consegui recuperar pois eu não fiz bons commits
+# O app quebrou e eu sem querer commitei as chaves de autenticação. Não consegui recuperar pois eu não fiz bons commits
 
 
 
